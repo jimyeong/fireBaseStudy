@@ -1,0 +1,28 @@
+@import "../../assets/base/helper.less";
+
+@white: #fff;
+
+.SideBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  font-size: .ptr(20) [];
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.3s linear;
+  &.SIDEBAR_OPEN {
+    opacity: 1;
+    transform: none;
+  }
+}
+.nav__link {
+  font-size: .ptr(18) [];
+  color: @white;
+  &.is-active {
+    font-size: .ptr(20) [];
+  }
+}

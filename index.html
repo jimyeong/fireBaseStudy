@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <title>connect</title>
   </head>
   <body>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDdnH1d_CkjIehLeH1H-Ug0V4UiVzZM950",
+        authDomain: "studyfirebase-985a6.firebaseapp.com",
+        databaseURL: "https://studyfirebase-985a6.firebaseio.com",
+        projectId: "studyfirebase-985a6",
+        storageBucket: "studyfirebase-985a6.appspot.com",
+        messagingSenderId: "34570062591",
+        appId: "1:34570062591:web:60763d379e65bad9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <div id="root"></div>
   </body>
 </html>

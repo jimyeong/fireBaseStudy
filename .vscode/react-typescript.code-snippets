@@ -1,0 +1,25 @@
+{
+  "import react": {
+    "scope": "javascript, typescript",
+    "prefix": "irr",
+    "body": [
+      "import React, {useState, useEffect} from 'react'",
+      "",
+      "function ${1:label}(props) {",
+      "const {} = props;",
+      "",
+      "return(",
+      "<div>$0</div>",
+      ")",
+      "}",
+      "export default ${1:label}"
+    ],
+    "description": "load import syntax to use react"
+  },
+  "pixelTorem": {
+    "scope": "css",
+    "prefix": "ptr",
+    "body": ["pxToRem($0)"],
+    "description": "pixel to Rem"
+  }
+}

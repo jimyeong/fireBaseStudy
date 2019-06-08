@@ -1,20 +1,23 @@
 import * as React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./assets/base/style.less";
-import { MainPage } from "./pages";
-import _ from "lodash";
+import { MainPage, PortfolioPage } from "./pages";
+import { Header, SideBar } from "./components";
+import { connect } from "react-redux";
 
 class App extends React.Component<any, any> {
   public home = "/";
-  public signUp = "/sign-up";
+  public portfolio = "/Portfolio";
   public makeGroup = "/add-group";
   public render() {
-    console.log("lodash", _.join(["hello", "world"]));
     return (
       <>
         <Router>
+          <Header />
+          <SideBar />
           <Switch>
             <Route exact path={this.home} render={() => <MainPage />} />
+            <Route exact path={this.portfolio} render={() => <PortfolioPage />} />
           </Switch>
         </Router>
       </>
@@ -22,4 +25,9 @@ class App extends React.Component<any, any> {
   }
 }
 
-export default App;
+export default connect(
+  state => ({ ...state }),
+  dispatch => ({
+    dispatch
+  })
+)(App);

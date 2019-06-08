@@ -1,3 +1,4 @@
-import MainPage from "./MainPage"
+import MainPage from "./MainPage";
+import PortfolioPage from "./PortfolioPage";
 
-export { MainPage };
+export { MainPage, PortfolioPage };
